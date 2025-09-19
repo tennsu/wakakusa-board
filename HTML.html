@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通話サイト</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>通話サイト</h1>
+        <!-- 部屋のパスワード入力フォーム -->
+        <input type="text" id="roomPassword" placeholder="部屋のパスワード">
+        <button onclick="joinRoom(document.getElementById('roomPassword').value)">部屋に入る</button>
+
+        <video id="localVideo" autoplay muted></video> <!-- 自分の映像 -->
+        <button id="toggleVideo">カメラ オン/オフ</button>
+        <button id="toggleAudio">マイク オン/オフ</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.0.0/dist/supabase.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
